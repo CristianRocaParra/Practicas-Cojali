@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./estilo_portfolio_4avance.css">
+	<script defer src="./temas_javascript.js"></script>
+	<script defer src="./datos_formulario_hab.js"></script>
+	<title>Portafolios</title>
+</head>
+<body>
+	<header>
+		<h1>Presentación</h1>
+		<div class="botones">
+			<button id="btnClaro">Tema Claro</button>
+			<button id="btnOscuro">Tema Oscuro</button>
+		</div>
+	</header>
+	<main>
+		<div class="contenido">
+			<h4>Hola soy Cristian, estudiante de DAW</h4>
+			<img src="./beluga.jpg" width="280px" height="200px" alt="Imagen Beluga" />
+			<p>En cuanto a mis habilidades laborales, poseo conocimientos básicos en:</p>
+			<ul id="lista_habilidades">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JAVA</li>
+				<li>JAVASCRIPT</li>
+				<li>ORACLE SQL</li>
+				<li>PYTHON</li>
+			</ul>
+			<a href="formulario_habilidades.html"><button>Añadir Habilidades</button></a>
+			<h4>Alguno de los proyectos que me gustaría realizar en el futuro son los siguientes:</h4>
+			<section>
+				<article>Crear mi propia página web (en desarrollo)</article>
+				<article>Desarrollar una base de datos donde almacene datos de mi empresa</article>
+				<article>Crear proyectos de IA revolucionarios</article>
+			</section>
+		</div>
+		<aside>
+			<table>
+				<tr>
+					<td colspan="2">Información Personal</td>
+				</tr>
+				<tr>
+					<td>Nombre:</td>
+					<td>Cristian</td>
+				</tr>
+				<tr>
+					<td>Apellidos:</td>
+					<td>Roca Parra</td>
+				</tr>
+				<tr>
+					<td>Edad:</td>
+					<td>19</td>
+				</tr>
+				<tr>
+					<td>Teléfono:</td>
+					<td>642 57 73 58</td>
+				</tr>
+			</table>
+			<div class="github">
+				<h1>Mis repositorios</h1>
+				<img height="30px" width="30px" src="data:image/png;base64,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">
+				<button style="height:50; width: 100px" id="btnRepos">Ver Repositorios</button>
+				<div id="contenedorRepos" class="oculto">
+					<img id="avatar" width="120">
+					<h2 id="name"></h2>
+					<p>Repos públicos: <span id="repos"></span></p>
+					<a href="https://github.com/CristianRocaParra?tab=repositories" target="_blank" style="color:green;">Enlace a mis repositorios</a>
+				</div>
+			</div>
+		</aside>
+	</main>
+	<footer>
+		<nav>
+			<h3>Redes Sociales</h3>
+			<a href="https://www.instagram.com/crxdgamer/" target="_blank"><img
+					src="data:image/jpeg;base64,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"
+					width="20px" height="20px" alt="Logo Instagram"></a>
+			<a href="https://www.youtube.com/@crxdgamer1919" target="_blank"><img
+					src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" width="20px"
+					height="20px" alt="Logo Youtube"></a>
+			<a href="https://x.com/Cristia02981905" target="_blank"><img
+					src="data:image/png;base64,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"
+					width="20px" height="20px" alt="Logo Twitter/X"></a>
+			<a href="formulario_preguntas.html" target="_blank" style="color:green">Formulario Preguntas</a>
+		</nav>
+		Copyright-05/26 - Cojali
+	</footer>
+	<script lang="JAVASCRIPT">
+		const btnRepos = document.getElementById("btnRepos");
+		const contenedor = document.getElementById("contenedorRepos");
+
+		btnRepos.addEventListener("click", async () => {
+
+			// Mostrar el contenedor o esconderlo
+			if (contenedor.classList.contains("oculto")){
+				contenedor.classList.remove("oculto");
+				contenedor.classList.add("visible");
+
+				// Obtener datos de GitHub
+				await obtenerRepos();
+			}else{
+				contenedor.classList.remove("visible");
+				contenedor.classList.add("oculto");
+			}
+
+		});
+		//función asíncrona
+		async function obtenerRepos(){
+
+			const response = await fetch('https://api.github.com/users/CristianRocaParra');
+
+			const data = await response.json();
+
+			document.getElementById("avatar").src = data.avatar_url;
+			document.getElementById("name").textContent =
+				data.name || data.login;
+
+			document.getElementById("repos").textContent =
+				data.public_repos;
+		}
+	</script>
+</body>
+</html>

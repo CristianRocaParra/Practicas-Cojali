@@ -1,0 +1,128 @@
+* {
+      margin: 0;
+      padding: 0;
+    }
+/*variables creadas propiamente para la personalizacion de colores de temas claros y oscuros*/
+body.dark {
+    --color-header_footer: #282b29;
+    --color-main: rgb(131, 149, 158);
+    --color-articles: rgb(186, 196, 204);
+    --color-texto: white;
+}
+/* Cuando el body tenga la clase .light, los valores cambian */
+body.light {
+    --color-header_footer: #f0f0f0; /* Gris muy claro en vez de blanco puro */
+    --color-main: #ffffff;
+    --color-articles: #e8e8e8;    /* Para que los artículos resalten del fondo */
+    --color-texto: black;
+}
+header{
+    background-color: var(--color-header_footer);
+    color:var(--color-texto);
+    height: 100px;
+    /*para alinean el texto al centro necesitamos el display flex*/
+    display: flex;
+    width: 100%;
+}
+header h1{
+    display: flex;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+}
+header .botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+}
+.botones button{
+    height: 50px;
+    width: 20%;
+    background: linear-gradient(rgb(153, 151, 151), rgb(201, 201, 206));
+    margin:10px;
+}
+.botones button:hover{
+    transform: scale(1.05);
+}
+/*Uso del flex en el main*/
+main{
+    display: flex;
+    /*al agregar elementos a la lista el main se hace más grande, por lo que para ajustarlo automáicamente usamos:*/
+    height: auto;  
+    color:var(--color-texto);
+    background-color:var(--color-main);
+    border:1px solid black;
+}
+main > *{
+    margin:10px;
+}
+main img{
+    border-radius: 30%;
+    margin:10px;
+}
+.contenido{
+    width: 75%;
+}
+.contenido ul{
+   list-style:none;
+}
+/*Uso del grid en el section*/
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide el espacio en 2 columnas iguales */
+}
+article{
+    margin-top:10px;
+    border:1px solid black;
+    color:var(--color-texto);
+    background-color: var(--color-articles);
+    margin:10px;
+    padding:10px;
+    height: 50px;
+    width: 90%;
+    box-shadow: 3px 3px #000; 
+} 
+article:nth-child(3) {
+    grid-column: 1 / span 2; /* Sigue necesitando ocupar el espacio de ambas columnas */
+    justify-self: center;    /* Lo alinea al centro del área que ocupa */
+    width: 50%;              /* Le das el ancho que prefieras */
+}
+article:hover{
+    transform:scale(1.05);
+}
+aside{
+    border:1px solid black;
+    margin:0;
+    width: 25%;
+}
+aside .github{
+    margin-top:20px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*contenedor de github-repos clases*/
+.oculto{
+    display: none;
+}
+.visible{
+    display: block;
+}
+aside table{
+    font-size: 25px;
+    border-collapse: collapse;
+    width: 100%;
+}
+aside table td{
+    border:1px solid black;
+    padding:3px;
+}
+footer{
+    height:"20px";
+    background-color: var(--color-header_footer);
+    color:var(--color-texto);
+}
+footer nav{
+    padding:5px;
+}

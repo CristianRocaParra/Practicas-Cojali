@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario Preguntas</title>
+        <meta charset="UTF-8">
+        <style>  
+        body {
+            display: flex;
+            flex-direction: column; /* Apila el header sobre el main */
+            justify-content: center; 
+            align-items: center;
+            background-color: beige;
+        }
+        label {
+            display: inline-block;
+            width: 70px; /* mismo ancho para todos */
+            vertical-align: top;
+        }
+        textarea[name="pregunta"] {
+            height: 100px;
+            width: 300px;
+        }
+        </style>
+    </head>
+    <body>
+        <header><h1>Formulario Preguntas</h1></header>
+        <main>
+            <form action="get">
+                <label>Nombre:</label><input type="text" name="nombre"><br/>
+                <label>Apellidos:</label><input type="text" name="apellido"><br/>
+                <label>Edad:</label><input type="number" name="edad"><br/>
+                <label>DNI:</label><input type="text" name="dni"><br/>
+                <label>Teléfono:</label><input type="number" name="telefono"><br/>
+                <label>Pregunta:</label><textarea name="pregunta"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </main>
+    </body>
+</html>
